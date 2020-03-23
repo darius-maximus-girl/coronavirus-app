@@ -1,47 +1,40 @@
-import React, {useState} from 'react';
-import Chart from './chart';
+import React, { useState, useEffect } from "react";
+import Chart from "./chart";
 
-const api = 'https://api.covid19api.com/summary';
+function Searchbar({ countries }) {
+  const [userCountry, setUserCountry] = useState("");
+  const [country, setCountry] = useState("");
+  const [message, setMessage] = useState("");
 
-function Searchbar() {
-
-    const [country, setCountry] = useState('');
-    const [showChart, setShowChart] = useState(false);
-    const [message, setMessage] = useState('')
-
-    const fetchData = () => {
-
-        if (message.length >= 1) {
-            
-        fetch(api)
-        .then((response) => {
-          return response.json();
-        })
-        .then((countries) => {
-            let results = Object.values(countries);
-            let filteredCountry = results[0].filter(name =>
-                name.Country === country);
-            setCountry(filteredCountry);
-            let date = results[1];
-            console.log('COUNTRIES', filteredCountry);
-            console.log('DATE', date);
-            setShowChart(true)
-            setMessage('')
-        });  
-        } else {
-            setMessage('Please, provide the name of the country')
-        }
-    }
-
-    return (
-        <div className="searchbar">
-            <input className="searchbar__input" onChange={e => setCountry(e.target.value)} placeholder="Search by a country"></input>
-            <button className="searchbar__btn" onClick={() => fetchData()}>Search</button>
-            {message}
-            <div className="searchbar__date"></div>
-            {showChart && <Chart country={country}/>}
-        </div>
+  const filterCountries = () => {
+    const filtered = countries.filter(
+      el => el.Country.toLowerCase() === userCountry.toLowerCase()
     );
+    console.log(filtered);
+    if (filtered.length >= 1) {
+      setCountry(filtered);
+      setUserCountry("")
+      setMessage("");
+    } else {
+      setMessage("Please, provide the correct name of the country");
+    }
+  };
+
+  return (
+    <div className="search-container">
+      <form className="searchbar" onSubmit={e => e.preventDefault()}>
+        <input
+          className="searchbar__input"
+          onChange={e => setUserCountry(e.target.value)}
+          value={userCountry}
+          placeholder="Search by a country"
+        ></input>
+        <button onClick={() => filterCountries()}>Search</button>
+      </form>
+      <p>{message}</p>
+      {country && <Chart country={country} />}
+    </div>
+  );
 }
 
 export default Searchbar;
