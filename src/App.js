@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Searchbar from "./components/searchbar";
 import Summary from "./components/summary";
 import AllCountries from './components/allCountries';
-import Quiz from "./components/quiz";
+import News from "./components/news";
 import Virus from "./assets/virus.png";
 
 const api = "https://api.covid19api.com/summary";
@@ -34,6 +34,7 @@ function App() {
       <div className="App">
         <nav className="navbar">
           <img src={Virus} alt="virus"></img>
+          <p>COVID-19</p>
           <ul className="navbar__links">
             <Link to="/">
               <li className="navbar__links-link">Search by a country</li>
@@ -41,8 +42,8 @@ function App() {
             <Link to="/allcountries">
               <li className="navbar__links-link">All countries</li>
             </Link>
-            <Link to="/areyousick">
-              <li className="navbar__links-link">Are you sick?</li>
+            <Link to="/news">
+              <li className="navbar__links-link">Latest news</li>
             </Link>
           </ul>
         </nav>
@@ -58,8 +59,8 @@ function App() {
           <Route path="/allcountries">
             <AllCountries countries={countries}/>
           </Route>
-          <Route path="/areyousick">
-            <Quiz />
+          <Route path="/news">
+            <News />
           </Route>
         </Switch>
       </div>

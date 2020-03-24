@@ -4,12 +4,12 @@ import Country from "./country";
 function AllCountries({ countries }) {
   const [sortedCountries, setSortedCountries] = useState([]);
 
-  useEffect(() => {
-      console.log(sortedCountries)
-  }, [sortedCountries])
+  // useEffect(() => {
+  //     console.log(sortedCountries)
+  // }, [sortedCountries])
 
   const sortResults = (val) => {
-    let sortedResults = countries.sort((a, b) => {
+    let sortedResults = [...countries].sort((a, b) => {
       if (val === "deaths") {
         return b.TotalDeaths - a.TotalDeaths;
       } else if (val === "cases") {
@@ -18,8 +18,7 @@ function AllCountries({ countries }) {
         return b.TotalRecovered - a.TotalRecovered;
       }
     });
-    console.log(sortedResults);
-    setSortedCountries([...sortedResults]);
+    setSortedCountries(sortedResults);
   };
 
   return (

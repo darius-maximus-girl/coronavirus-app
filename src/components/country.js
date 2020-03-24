@@ -2,7 +2,6 @@ import React from "react";
 
 function Country({ country }) {
   let imgSrc = `https://cdn.countryflags.com/thumbs/${country.Slug === 'us' ? 'united-states-of-america' : country.Slug}/flag-400.png`;
-  console.log(imgSrc);
 
   return (
     <li>

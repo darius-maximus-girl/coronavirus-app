@@ -10,7 +10,7 @@ function Searchbar({ countries }) {
     const filtered = countries.filter(
       el => el.Country.toLowerCase() === userCountry.toLowerCase()
     );
-    console.log(filtered);
+
     if (filtered.length >= 1) {
       setCountry(filtered);
       setUserCountry("")
