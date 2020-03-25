@@ -1,0 +1,89 @@
+.all-container {
+  font-family: "Cutive Mono", cursive;
+  margin: 30px auto;
+  width: 100%;
+
+  @media #{$small} {
+    width: 70%;
+  }
+
+  .all-text {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .all-btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+
+    @media #{$small} {
+      justify-content: center;
+    }
+
+    &__btn {
+      width: 90px;
+      padding: 5px;
+      border: none;
+      font-family: "Cutive Mono", cursive;
+      background-color: #e6c8e6;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 1s;
+      margin: 10px;
+
+      &:hover {
+        background-color: rgb(206, 171, 206);
+      }
+    }
+  }
+
+  .all-countries {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    max-width: 85%;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 26px 0px grey;
+
+    &__item {
+      background: #3a3436;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+
+      span {
+        color: rgb(195, 25, 247);
+        font-weight: bold;
+        background-color: rgb(51, 49, 49);
+        padding: 3px;
+      }
+
+      @media #{$small} {
+        list-style-type: decimal;
+      }
+
+      &-country {
+        background-color: #0000002e;
+        border-radius: 5px;
+        padding: 5px;
+        font-family: "Black Ops One", cursive;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: violet;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      &-data {
+          margin-bottom: 9px;
+      }
+    }
+  }
+}
