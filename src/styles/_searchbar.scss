@@ -1,7 +1,39 @@
 .search-container {
-    width: 80%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 30px auto;
     text-align: center;
-    max-width: 700px;
-    margin-top: 50px;
+
+    @media #{$small} {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .searchbar {
+        &__input {
+            border: none;
+            padding: 8px;
+            font-family: "Cutive Mono", cursive;
+
+            &::placeholder {
+              font-family: "Cutive Mono", cursive;
+            }
+        }
+
+        &__btn {
+            padding: 8px;
+            border: none;
+            width: 100px;
+            color: #5b1279;
+            background-color: #9932dabf;
+            font-family: 'Black Ops One', cursive;
+            cursor: pointer;
+        }
+    }
+
+    .searchbar-msg {
+        font-family: "Cutive Mono", cursive;
+        margin: 15px auto;
+        color: #5b1279;
+        width: 300px;
+    }
 }

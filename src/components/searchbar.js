@@ -29,9 +29,9 @@ function Searchbar({ countries }) {
           value={userCountry}
           placeholder="Search by a country"
         ></input>
-        <button onClick={() => filterCountries()}>Search</button>
+        <button className="searchbar__btn" onClick={() => filterCountries()}>Search</button>
       </form>
-      <p>{message}</p>
+      <p className="searchbar-msg">{message}</p>
       {country && <Chart country={country} />}
     </div>
   );

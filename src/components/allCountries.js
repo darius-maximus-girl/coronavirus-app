@@ -23,10 +23,10 @@ function AllCountries({ countries }) {
 
   return (
     <div className="all-container">
-      <p>Sort countries by the highest number of:</p>
-      <button onClick={() => sortResults("deaths")}>Deaths</button>
-      <button onClick={() => sortResults("cases")}>Cases</button>
-      <button onClick={() => sortResults("recovered")}>Recoveries</button>
+      <p className="all-text">Sort countries by the highest number of:</p>
+      <button className="all-btn" onClick={() => sortResults("deaths")}>Deaths</button>
+      <button className="all-btn" onClick={() => sortResults("cases")}>Cases</button>
+      <button className="all-btn" onClick={() => sortResults("recovered")}>Recoveries</button>
       <ul className="all-countries">
         {sortedCountries.map((country, key) => {
           return <Country key={key} country={country}/>

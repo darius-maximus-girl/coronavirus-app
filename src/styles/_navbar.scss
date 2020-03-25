@@ -7,12 +7,11 @@
   padding: 10px 20px;
 
   &__logo {
-    display: none;
+    display: flex;
     font-family: "Monofett", cursive;
     font-size: 40px;
 
     @media #{$small} {
-      display: flex;
       align-items: center;
     }
 
@@ -33,9 +32,13 @@
   }
 
   &__links {
-    display: flex;
+    display: none;
     list-style-type: none;
     font-family: "Cutive Mono", cursive;
+
+    @media #{$large} {
+      display: flex;
+    }
 
     &-link {
       text-align: center;

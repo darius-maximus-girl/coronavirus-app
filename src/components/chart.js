@@ -1,5 +1,8 @@
 import React from "react";
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut, defaults } from "react-chartjs-2";
+
+defaults.global.defaultFontFamily = "Cutive Mono";
+defaults.global.defaultFontSize	= 15;
 
 function Chart({ country }) {
   let countryData = country[0];
@@ -32,21 +35,21 @@ function Chart({ country }) {
           "#B5EAD7",
           "#d0f5d0"
         ]
-      },
+      }
     ]
   };
 
   return (
     <div className="chart">
       <Doughnut data={data} />
-      <div>
-        Summary:
-        <p>Total cases: {countryData.TotalConfirmed}</p>
-        <p>New cases: {countryData.NewConfirmed}</p>
-        <p>Total deaths: {countryData.TotalDeaths}</p>
-        <p>New deaths: {countryData.NewDeaths}</p>
-        <p>All Recovered cases: {countryData.TotalRecovered}</p>
-        <p>Newly recovered: {countryData.NewRecovered}</p>
+      <div className="chart-summary">
+        <p className="chart-summary__country">Summary for <span>{countryData.Country}</span></p>
+        <p className="chart-summary__data">Total cases: <span>{countryData.TotalConfirmed}</span></p>
+        <p className="chart-summary__data">New cases: <span>{countryData.NewConfirmed}</span></p>
+        <p className="chart-summary__data">Total deaths: <span>{countryData.TotalDeaths}</span></p>
+        <p className="chart-summary__data">New deaths: <span>{countryData.NewDeaths}</span></p>
+        <p className="chart-summary__data">All Recovered cases: <span>{countryData.TotalRecovered}</span></p>
+        <p className="chart-summary__data">Newly recovered: <span>{countryData.NewRecovered}</span></p>
       </div>
     </div>
   );

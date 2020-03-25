@@ -1,0 +1,40 @@
+.chart {
+  font-family: "Cutive Mono", cursive;
+
+  @media #{$mid} {
+    // display: flex;
+  }
+
+  .chart-summary {
+    margin: 30px auto;
+    background-color: #ffffff;
+    text-align: left;
+    padding: 10px;
+    max-width: 300px;
+
+    @media #{$mid} {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__country {
+      background: #3a3436;
+      padding: 5px;
+      color: white;
+
+      span {
+        color: violet;
+        font-weight: bold;
+      }
+    }
+
+    &__data {
+        margin-top: 5px;
+        span {
+            color: violet;
+            font-weight: bold;
+        }
+    }
+  }
+}
