@@ -24,7 +24,6 @@ function News() {
 
     return (
         <div className="news-container">
-            LATEST NEWS ON CORONAVIRUS:
             <ul className="articles">
                 {news.map((article, key) => {
                     return <Article key={key} article={article} />

@@ -2,7 +2,6 @@ import React from "react";
 import ReactCountUp from "react-countup-v2";
 
 function Summary({ countries }) {
-
   const reduced = countries.reduce(
     (acc, cur) => ({
       totalCases: (acc.totalCases || 0) + cur.TotalConfirmed,
@@ -17,18 +16,26 @@ function Summary({ countries }) {
 
   return (
     <div className="summary">
-      <p>
-        Total Cases:
-        <ReactCountUp endVal={reduced.totalCases} />
+      <p className="summary__item">
+        Total Cases
+        <br></br>
+       <span className="summary__item-emphasis"><ReactCountUp endVal={reduced.totalCases} /></span>
       </p>
-      <p>
-        Dead:
-        <ReactCountUp endVal={reduced.totalDeaths} />
+      <p className="summary__item">
+        Dead
+        <br></br>
+        <span className="summary__item-emphasis"><ReactCountUp endVal={reduced.totalDeaths} /></span>
       </p>
-      <p>
-        Recovered: <ReactCountUp endVal={reduced.totalRecovered} />
+      <p className="summary__item">
+        Recovered
+        <br></br>
+        <span className="summary__item-emphasis"><ReactCountUp endVal={reduced.totalRecovered} /></span>
       </p>
-      <p>Currently Sick: {currentlySick}</p>
+      <p className="summary__item">
+        Currently Sick
+        <br></br>
+        <span className="summary__item-emphasis">{currentlySick}</span>
+      </p>
     </div>
   );
 }

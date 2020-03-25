@@ -33,11 +33,13 @@ function App() {
     <Router>
       <div className="App">
         <nav className="navbar">
-          <img src={Virus} alt="virus"></img>
-          <p>COVID-19</p>
+          <div className="navbar__logo">
+          <img className="navbar__logo-img" src={Virus} alt="virus"></img>
+          <p className="navbar__logo-txt">COVID-19</p>
+          </div>
           <ul className="navbar__links">
             <Link to="/">
-              <li className="navbar__links-link">Search by a country</li>
+              <li className="navbar__links-link">Country data</li>
             </Link>
             <Link to="/allcountries">
               <li className="navbar__links-link">All countries</li>
@@ -47,10 +49,12 @@ function App() {
             </Link>
           </ul>
         </nav>
-        <p>Get the lates data on coronavirus</p>
-        <p>
-          Last update: {date}; {time}
+        <div className="date-container">
+        {/* <p className="date-text">Get the lates data on coronavirus</p> */}
+        <p className="date-data">
+          Last update: <span>{date}</span>; <span>{time}</span>
         </p>
+        </div>
         <Summary countries={countries} />
         <Switch>
           <Route path="/" exact>

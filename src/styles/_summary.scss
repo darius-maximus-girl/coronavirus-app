@@ -1,3 +1,57 @@
 .summary {
-    background: pink;
+  background: #211d1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 130px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3a3436;
+    margin: 10px;
+    color: white;
+    font-family: 'Black Ops One', cursive;
+    font-size: 10px;
+    transition: 1s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1); 
+      z-index: 2;
+      background-color: #5c5759;
+      margin-right: 10px;
+
+      &-emphasis {
+        color: rgb(169, 19, 214);
+      }
+    }
+
+    &-emphasis {
+      color: violet;
+      font-weight: bold;
+      font-family: 'Black Ops One', cursive;
+      font-size: 18px;
+      transition: 1s;
+    }
+
+    &:last-child {
+      span {
+        animation: fadein 7s;
+
+        @keyframes fadein {
+          from {
+            color: #3a3436;
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+            color: violet;
+          }
+        }
+      }
+    }
+  }
 }

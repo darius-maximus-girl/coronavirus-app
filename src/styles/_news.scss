@@ -1,0 +1,40 @@
+.news-container {
+  width: 98%;
+  margin: 0 auto;
+
+  @media #{$small} {
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .articles {
+    list-style-type: none;
+
+    &__item {
+      background-color: white;
+      margin: 20px;
+      padding: 5px;
+
+      @media #{$small} {
+        padding: 20px;
+      }
+
+      &-title {
+        background-color: #d1c7d37a;
+        padding: 20px;
+        margin-bottom: 15px;
+      }
+
+      &-img {
+        width: 100%;
+      }
+
+      
+      &-src {
+    }
+
+      &-published {
+      }
+    }
+  }
+}
