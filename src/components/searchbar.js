@@ -11,7 +11,7 @@ function Searchbar({ countries }) {
       el => el.Country.toLowerCase() === userCountry.toLowerCase()
     );
 
-    if (filtered.length >= 1) {
+    if (filtered.length >= 1 && userCountry !== "") {
       setCountry(filtered);
       setUserCountry("")
       setMessage("");

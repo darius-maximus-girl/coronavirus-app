@@ -26,3 +26,13 @@ a {
 li {
   list-style-type: none;
 }
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: rgb(188, 139, 201);
+  outline: 1px solid rgb(110, 33, 155);
+}
