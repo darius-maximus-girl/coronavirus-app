@@ -64,6 +64,7 @@
         font-weight: bold;
         background-color: rgb(51, 49, 49);
         padding: 3px;
+        border-radius: 3px;
       }
 
       @media #{$small} {
@@ -96,7 +97,7 @@
 
 .active-data {
   span {
-    color: #ff1aae !important;
-    background-color: #401642 !important;
+    color: #9800e6 !important;
+    background-color: #ecdfec !important;
   }
 }
