@@ -29,8 +29,9 @@
       background-color: #e6c8e6;
       border-radius: 4px;
       cursor: pointer;
-      transition: 1s;
+      transition: .3s;
       margin: 10px;
+      border: 1px solid #e6c8e6;
 
       &:hover {
         background-color: rgb(206, 171, 206);
@@ -44,7 +45,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px;
     color: white;
     max-width: 85%;
     margin: 0 auto;
@@ -53,13 +54,14 @@
 
     &__item {
       background: #3a3436;
+      margin-top: 20px;
       margin-bottom: 20px;
       padding: 20px;
       border-radius: 10px;
       width: 250px;
 
       span {
-        color: rgb(195, 25, 247);
+        color: #c346e9;
         font-weight: bold;
         background-color: rgb(51, 49, 49);
         padding: 3px;
@@ -76,7 +78,7 @@
         font-family: "Black Ops One", cursive;
         font-size: 16px;
         text-transform: uppercase;
-        color: violet;
+        color: #ee82ee;
         text-align: center;
         margin-bottom: 10px;
       }
@@ -85,5 +87,15 @@
           margin-bottom: 9px;
       }
     }
+  }
+}
+
+.active-btn {
+  border: 1px solid #c19bce !important;
+}
+
+.active-data {
+  span {
+    color: #ff1aae !important;
   }
 }
