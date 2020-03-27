@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Country from "./country";
+import RocketBtn from "./rocketBtn";
 
 function AllCountries({ countries }) {
   const [sortedCountries, setSortedCountries] = useState([]);
@@ -66,6 +67,7 @@ function AllCountries({ countries }) {
           return <Country key={key} country={country} category={buttons}/>;
         })}
       </ul>
+      <RocketBtn />
     </div>
   );
 }

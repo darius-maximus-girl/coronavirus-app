@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Article from "./article";
 import Loader from "react-loader-spinner";
+import RocketBtn from "./rocketBtn";
 
 let apiKey = process.env.REACT_APP_API_KEY;
 let api = `https://newsapi.org/v2/top-headlines?q=coronavirus&language=en&pageSize=50&apiKey=${apiKey}`;
@@ -35,6 +36,7 @@ function News() {
         })}
       </ul>
     </div>
+    <RocketBtn />
     </div>
   );
 }
