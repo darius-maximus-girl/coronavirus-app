@@ -3,7 +3,7 @@ import Article from "./article";
 import Loader from "react-loader-spinner";
 
 let apiKey = process.env.REACT_APP_API_KEY;
-let api = `http://newsapi.org/v2/top-headlines?q=coronavirus&language=en&pageSize=50&apiKey=${apiKey}`;
+let api = `https://newsapi.org/v2/top-headlines?q=coronavirus&language=en&pageSize=50&apiKey=${apiKey}`;
 
 function News() {
   const [news, setNews] = useState([]);

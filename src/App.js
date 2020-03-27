@@ -48,7 +48,11 @@ function App() {
                 onClick={() =>
                   setLinks({ link1: true, link2: false, link3: false })
                 }
-                className={links.link1 ? "active navbar__links-link" : "navbar__links-link"}
+                className={
+                  links.link1
+                    ? "active navbar__links-link"
+                    : "navbar__links-link"
+                }
               >
                 Country data
               </li>
@@ -58,7 +62,11 @@ function App() {
                 onClick={() =>
                   setLinks({ link1: false, link2: true, link3: false })
                 }
-                className={links.link2 ? "active navbar__links-link" : "navbar__links-link"}
+                className={
+                  links.link2
+                    ? "active navbar__links-link"
+                    : "navbar__links-link"
+                }
               >
                 All countries
               </li>
@@ -68,7 +76,11 @@ function App() {
                 onClick={() =>
                   setLinks({ link1: false, link2: false, link3: true })
                 }
-                className={links.link3 ? "active navbar__links-link" : "navbar__links-link"}
+                className={
+                  links.link3
+                    ? "active navbar__links-link"
+                    : "navbar__links-link"
+                }
               >
                 Latest news
               </li>

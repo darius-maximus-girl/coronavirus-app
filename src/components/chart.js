@@ -28,9 +28,9 @@ function Chart({ country }) {
           countryData.NewRecovered
         ],
         backgroundColor: [
-          "#fb79b5",
-          "#f2bcff",
-          "#b68dec",
+          "#ee82ee",
+          "#eabfea",
+          "#9932dabf",
           "#c6b6da",
           "#B5EAD7",
           "#d0f5d0"
