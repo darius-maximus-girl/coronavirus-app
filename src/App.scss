@@ -1,5 +1,13 @@
 @import "./styles/export";
 
+body {
+  padding-top: 70px;
+
+  @media #{$large} {
+    padding-top: 0;
+  }
+}
+
 .date-container {
   padding: 10px;
   background-color: #141314;

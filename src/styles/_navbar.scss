@@ -1,10 +1,19 @@
 .navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #e1cae4;
-  // margin-bottom: 100px;
   padding: 10px 20px;
+  z-index: 10;
+
+  @media #{$large} {
+    position: relative;
+    height: auto;
+  }
 
   &__logo {
     display: flex;
@@ -60,6 +69,21 @@
         background-color: #3a3436;
         color: violet;
       }
+    }
+  }
+
+  .hamburger {
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    @media #{$large} {
+      display: none;
+    }
+
+    span {
+      height: 4px !important;
+      border-radius: 40px !important;
     }
   }
 }

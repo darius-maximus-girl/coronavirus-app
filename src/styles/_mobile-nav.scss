@@ -1,0 +1,45 @@
+.mb-nav-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 70px;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  background-color: rgba(177, 112, 190, 0.808);
+  animation: slide 0.5s forwards;
+  z-index: 8;
+
+  @media #{$large} {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+
+    &__link {
+      background-color: #1b151bcc;
+      width: 200px;
+      text-align: center;
+      padding: 15px;
+      color: #b2adb3;
+      font-weight: bold;
+      font-family: "Roboto Mono", cursive;
+      margin-top: 40px;
+      border-radius: 15px;
+    }
+  }
+}
+
+.slide-up {
+  display: none;
+}
+
+@keyframes slide {
+  to {
+    height: 100vh;
+  }
+}
