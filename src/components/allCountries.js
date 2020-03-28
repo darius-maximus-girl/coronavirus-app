@@ -64,7 +64,7 @@ function AllCountries({ countries }) {
       </div>
       <ul className="all-countries">
         {sortedCountries.map((country, key) => {
-          return <Country key={key} country={country} category={buttons}/>;
+          return <Country key={key} country={country} category={buttons} />;
         })}
       </ul>
       <RocketBtn />
