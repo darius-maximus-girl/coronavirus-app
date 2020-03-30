@@ -6,7 +6,6 @@ import Summary from "./components/summary";
 import AllCountries from "./components/allCountries";
 import News from "./components/news";
 import Virus from "./assets/virus.png";
-import MobileNav from "./components/mobileNavbar";
 import HamburgerMenu from "react-hamburger-menu";
 
 const api = "https://api.covid19api.com/summary";
@@ -38,10 +37,6 @@ function App() {
   const handleHamburger = () => {
     setOpen(!open);
   };
-
-  const closeHamburger = (val) => {
-    setOpen(val)
-  }
 
   return (
     <Router>
@@ -134,7 +129,7 @@ function App() {
             Last update: <span>{date}</span>; <span>{time}</span>
           </p>
         </div>
-        <Summary countries={countries} close={closeHamburger}/>
+        <Summary countries={countries} />
         <Switch>
           <Route path="/" exact>
             <Searchbar countries={countries} />
