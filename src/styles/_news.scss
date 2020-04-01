@@ -8,105 +8,112 @@
     margin-top: 100px;
   }
 
-.news-container {
-  width: 98%;
-  margin: 0 auto;
-  font-family: "Roboto Mono", cursive;
-  font-size: 14px;
+  .news-container {
+    width: 98%;
+    margin: 0 auto;
+    font-family: "Roboto Mono", cursive;
+    font-size: 14px;
 
-  @media #{$small} {
-    width: 80%;
-    max-width: 700px;
-    background-color: #3a3436;
-    border-radius: 15px;
-    box-shadow: 0px 0px 26px 0px grey;
-    margin-top: 50px;
-  }
-
-  .articles {
-    list-style-type: none;
-    padding: 50px 0;
-    margin-bottom: 50px;
-
-    &__item {
-      background-color: white;
-      margin: 20px;
-      padding: 5px;
+    @media #{$small} {
+      width: 80%;
+      max-width: 700px;
+      background-color: #3a3436;
       border-radius: 15px;
-      width: 90%;
-      margin: 0 auto;
+      box-shadow: 0px 0px 26px 0px grey;
+      margin-top: 50px;
+    }
+
+    .articles {
+      list-style-type: none;
+      padding: 50px 0;
       margin-bottom: 50px;
-      transition: .4s linear;
 
-      @media #{$small} {
-        width: 80%;
-        padding: 20px;
-        &:hover {
-          box-shadow: 0px 0px 26px 0px;
-          transform: scale(1.1);
-        }
-      }
-
-      &-title {
-        background-color: #211d1e;
-        padding: 20px;
-        margin-bottom: 15px;
-        font-family: "Montserrat", cursive;
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-      }
-
-      &-img {
-        width: 100%;
-      }
-
-      &-content {
-        line-height: 24px;
-      }
-
-      &-src {
-        margin-bottom: 20px;
-
-        span {
-          color: violet;
-        }
-      }
-
-      &-published {
-      }
-
-      &-link {
-        color: violet;
-        width: 60%;
-        font-weight: bold;
-        font-weight: bold;
-        background-color: #3a3436;
-        border: 1px solid #3a3436;
-        padding: 7px;
-        border-radius: 5px;
-        text-align: center;
-        transition: 0.3s linear;
+      &__item {
+        background-color: white;
+        margin: 20px;
+        padding: 5px;
+        border-radius: 15px;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        transition: 0.4s linear;
 
         @media #{$small} {
-          width: 35%;
+          width: 80%;
+          padding: 20px;
+          &:hover {
+            box-shadow: 0px 0px 26px 0px;
+            transform: scale(1.1);
+          }
         }
 
-        &:hover {
+        &-title {
+          background-color: #211d1e;
+          padding: 20px;
+          margin-bottom: 15px;
+          font-family: "Montserrat", cursive;
+          font-size: 20px;
+          font-weight: bold;
+          color: white;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+
+          @media #{$small} {
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+          }
+        }
+
+        &-img {
+          width: 100%;
+        }
+
+        &-content {
+          line-height: 24px;
+        }
+
+        &-src {
+          margin-bottom: 20px;
+
+          span {
+            color: violet;
+          }
+        }
+
+        &-published {
+        }
+
+        &-link {
+          color: violet;
+          width: 60%;
+          font-weight: bold;
+          font-weight: bold;
+          background-color: #3a3436;
           border: 1px solid #3a3436;
-          background-color: white;
-        }
-      }
+          padding: 7px;
+          border-radius: 5px;
+          text-align: center;
+          transition: 0.3s linear;
 
-      .line {
-        margin: 10px auto;
-        width: 100%;
-        height: 1px;
-        background-color: rgba(188, 156, 192, 0.699);
+          @media #{$small} {
+            width: 35%;
+          }
+
+          &:hover {
+            border: 1px solid #3a3436;
+            background-color: white;
+          }
+        }
+
+        .line {
+          margin: 10px auto;
+          width: 100%;
+          height: 1px;
+          background-color: rgba(188, 156, 192, 0.699);
+        }
       }
     }
   }
-}
 }
 
 .disappear {
