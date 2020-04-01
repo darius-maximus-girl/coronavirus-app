@@ -7,6 +7,7 @@ import AllCountries from "./components/allCountries";
 import News from "./components/news";
 import Virus from "./assets/virus.png";
 import HamburgerMenu from "react-hamburger-menu";
+import Footer from "./components/footer";
 
 const api = "https://api.covid19api.com/summary";
 
@@ -141,6 +142,7 @@ function App() {
             <News />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

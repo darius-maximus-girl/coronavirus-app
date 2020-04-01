@@ -16,6 +16,7 @@ function News() {
         return response.json();
       })
       .then(data => {
+        // .replace(/\[\+\d+ chars\]$/, "")
         let articles = Object.values(data);
         setNews(articles[2]);
         setLoader(false)

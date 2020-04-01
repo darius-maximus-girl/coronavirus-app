@@ -1,0 +1,16 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 3px;
+  color: white;
+  background-color: rgba(206, 164, 200, 0.16);
+  height: 15px;
+  font-family: "Cutive Mono", cursive;
+  font-size: 10px;
+
+  a {
+    cursor: pointer;
+    color: purple;
+  }
+}

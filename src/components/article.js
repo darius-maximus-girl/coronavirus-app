@@ -6,7 +6,7 @@ function Article({article}) {
         <li className="articles__item">
            <p className="articles__item-title" >{article.title}</p>
            <img  className="articles__item-img" src={article.urlToImage}></img>
-           <p className="articles__item-content" >{article.content}</p>
+           <p dangerouslySetInnerHTML={{ __html: article.content }} className="articles__item-content" />
            <div className="line"></div>
            <p className="articles__item-published">{article.publishedAt}</p>
            <div className="line"></div>
